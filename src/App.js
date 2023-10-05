@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from 'react';
 
 function App() {
+  // const [bgColor, setBgColor] = useState('teal');
+  const [isFocus, setIsFocus] = useState('teal');
+  const [count, setCount] = useState(0);
+
+  // const []
+
+  const handleChangeColor = () => {
+    // setBgColor('pink');
+    // setIsFocus('true');
+  };
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ marginLeft: '10px' }}>
+      <button onClick={handleChangeColor}>Color change to PINK</button>
+      <br/>
+      <br/>
+      <button onClick={() => setCount(count + 1)}>Count +</button>
+      <br />
+      <br />
+      <input autoFocus={false} />
+      <br />
+      <br />
+      <input />
+      <br />
+      <br />
+
+
+      <div
+        style={{
+          width: '100px',
+          height: '100px',
+          // backgroundColor: bgColor,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+
+        <h1>{count}</h1>
+
+      </div>
     </div>
   );
 }

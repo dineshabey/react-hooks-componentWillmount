@@ -9,12 +9,11 @@ export default function StudentForm() {
 
 
     const handleSubmit = () => {
-        const student = {name,nic,email,phone,address};
+        const student = { name, nic, email, phone, address };
         console.log(student)
-        
+
     };
 
-    handleSubmit();
 
     return (
         <div>
@@ -32,7 +31,7 @@ export default function StudentForm() {
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Email :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setEmail(e.target.value)}/>
+                        <input style={{ fontSize: '25px' }} onChange={e => setEmail(e.target.value)} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Phone :</label>
@@ -40,11 +39,14 @@ export default function StudentForm() {
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Address :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setAddress(e.target.value)}/>
+                        <input style={{ fontSize: '25px' }} onChange={e => setAddress(e.target.value)} />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
 
-                        <button style={{ fontSize: '20px' }}>Submit</button>
+                        <button style={{ fontSize: '20px' }} onClick={handleSubmit}>
+                            {''}
+                            Submit
+                        </button>
                     </div>
                 </div>
             </div>

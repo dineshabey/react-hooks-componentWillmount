@@ -15,7 +15,6 @@ export default function ExaminationForm() {
 
     };
 
-    handleSubmit();
 
     return (
         <div style={{ marginLeft: '30px' }}>

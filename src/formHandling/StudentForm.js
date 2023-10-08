@@ -8,10 +8,9 @@ export default function StudentForm() {
 
 
     const handleSubmit = () => {
-        console.log(name)
-        console.log(email)
-        console.log(phone)
-        console.log(address)
+        const student = {name,email,phone,address};
+        console.log(student)
+        
     };
 
     handleSubmit();

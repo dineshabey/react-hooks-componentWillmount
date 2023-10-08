@@ -8,7 +8,7 @@ export const useForm = (initialState) => {
             setValues(
                 {
                     ...values, //spread val obj
-                    [e.target.name]: e.target.values, //val assing
+                    [e.target.name]: e.target.value, //val assing
                 }
             );
         },

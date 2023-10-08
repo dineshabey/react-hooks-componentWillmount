@@ -10,7 +10,7 @@ export default function App() {
       {/* <button onClick={() => { setVisible(!isVisible) }}>Show ref components</button>
       {isVisible && <LearnReference />} */}
 
-      <StudentForm />
+      {/* <StudentForm /> */}
 
       <br/>
 

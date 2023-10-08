@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 
 export default function StudentForm() {
     const [name, setName] = useState('');
+    const [nic, setNic] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
 
 
     const handleSubmit = () => {
-        const student = {name,email,phone,address};
+        const student = {name,nic,email,phone,address};
         console.log(student)
         
     };
@@ -24,6 +25,10 @@ export default function StudentForm() {
                     <div style={{ marginTop: '15px' }}>
                         <label>Name :</label>
                         <input style={{ fontSize: '25px' }} onChange={e => setName(e.target.value)} />
+                    </div>
+                    <div style={{ marginTop: '15px' }}>
+                        <label>NIC :</label>
+                        <input style={{ fontSize: '25px' }} onChange={e => setNic(e.target.value)} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Email :</label>

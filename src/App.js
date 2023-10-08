@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import LearnReference from './learnRef/LearnReference'
 import StudentForm from './formHandling/StudentForm';
+import ExaminationForm from './formHandling/ExaminationForm';
 
 export default function App() {
   const [isVisible, setVisible] = useState(false);
@@ -10,6 +11,10 @@ export default function App() {
       {isVisible && <LearnReference />} */}
 
       <StudentForm />
+
+      <br/>
+
+      <ExaminationForm/>
 
     </div>
   )

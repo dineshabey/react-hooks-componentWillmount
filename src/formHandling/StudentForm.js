@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
+import { useForm } from '../customHooks/useForm';
+
+
+
 
 export default function StudentForm() {
-    const [name, setName] = useState('');
-    const [nic, setNic] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [address, setAddress] = useState('');
 
+    const [values,handleChange] = useForm();
 
-    const handleSubmit = () => {
-        const student = { name, nic, email, phone, address };
-        console.log(student)
-
-    };
-
+    console.log(values);
+    console.log(handleChange);
 
     return (
         <div>
@@ -23,27 +19,27 @@ export default function StudentForm() {
 
                     <div style={{ marginTop: '15px' }}>
                         <label>Name :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setName(e.target.value)} />
+                        <input name='name' style={{ fontSize: '25px' }} onChange={handleChange} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>NIC :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setNic(e.target.value)} />
+                        <input name='nic' style={{ fontSize: '25px' }} onChange={handleChange} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Email :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setEmail(e.target.value)} />
+                        <input name='email' style={{ fontSize: '25px' }} onChange={handleChange} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Phone :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setPhone(e.target.value)} />
+                        <input name='phone' style={{ fontSize: '25px' }} onChange={handleChange} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Address :</label>
-                        <input style={{ fontSize: '25px' }} onChange={e => setAddress(e.target.value)} />
+                        <input name='address' style={{ fontSize: '25px' }} onChange={handleChange} />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
 
-                        <button style={{ fontSize: '20px' }} onClick={handleSubmit}>
+                        <button style={{ fontSize: '20px' }} >
                             {''}
                             Submit
                         </button>

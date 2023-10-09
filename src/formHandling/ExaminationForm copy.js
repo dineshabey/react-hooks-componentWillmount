@@ -5,22 +5,7 @@ import { useForm } from '../customHooks/useForm';
 
 export default function ExaminationFormCopy() {
 
-    const [{ maths, chemistry, physics, english }, handleChanges] = useForm({ maths: 0, chemistry: 0, physics: 0, english: 0 });
-
-    // const [index, setIndex] = useState('');
-    // const [maths, setMaths] = useState('');
-    // const [chemistry, setChemistry] = useState('');
-    // const [physics, setPhysics] = useState('');
-    // const [english, setEnglish] = useState('');
-
-
-    const handleSubmit = () => {
-        // const results = { index, maths, chemistry, physics, english };
-        // console.log(results)
-
-    };
-
-    // console.log(values);
+    const [{ maths, chemistry, physics, english }, handleChanges, handleSubmit] = useForm({ maths: 0, chemistry: 0, physics: 0, english: 0 });
     console.log(handleChanges);
 
 

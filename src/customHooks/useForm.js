@@ -2,6 +2,11 @@ import { useState } from "react";
 
 export const useForm = (initialState) => {
     const [values, setValues] = useState(initialState);
+
+    const handleSubmit = () => {
+        console.log(values);
+    }
+
     return [
         values, //values object
         e => {
@@ -12,5 +17,7 @@ export const useForm = (initialState) => {
                 }
             );
         },
+
+        handleSubmit, //return handleSubmit 
     ];
 };

@@ -5,7 +5,7 @@ import { useForm } from '../customHooks/useForm';
 
 export default function ExaminationFormCopy() {
 
-    const [values,handleChanges] = useForm();
+    const [values,handleChanges] = useForm({maths:0,chemistry:0,physics:0,english:0});
 
     // const [index, setIndex] = useState('');
     // const [maths, setMaths] = useState('');
@@ -38,15 +38,15 @@ export default function ExaminationFormCopy() {
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
                     <div style={{ marginTop: '15px' }}>
                         <label>Maths result :</label>
-                        <input name='maths' style={{ fontSize: '25px' }} onChange={handleChanges} />
+                        <input value={values['maths']} name='maths' style={{ fontSize: '25px' }} onChange={handleChanges} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Chemistry result :</label>
-                        <input name='chemistry' style={{ fontSize: '25px' }} onChange={handleChanges} />
+                        <input value={values['chemistry']} name='chemistry' style={{ fontSize: '25px' }} onChange={handleChanges} />
                     </div>
                     <div style={{ marginTop: '15px' }}>
                         <label>Physics result :</label>
-                        <input name='physics' style={{ fontSize: '25px' }} onChange={handleChanges} />
+                        <input value={values['physics']} name='physics' style={{ fontSize: '25px' }} onChange={handleChanges} />
                     </div>
                 </div>
                 <div style={{ marginTop: '15px' }}>
